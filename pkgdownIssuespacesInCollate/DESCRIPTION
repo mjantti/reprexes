@@ -1,0 +1,15 @@
+Package: pkgdownIssuespacesInCollate
+Title: Demonstrates issue with multiple space in Collate
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = c("Georgi", "N."),
+           family = "Boshnakov",
+           role = c("aut", "cre"),
+           email = "georgi.boshnakov@gmail.com")
+Description: Demonstrates issue with multiple spaces in field Collate in
+    file 'DESCRIPTION'.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Collate: 'a.R'  'b.R'
+RoxygenNote: 6.1.0
