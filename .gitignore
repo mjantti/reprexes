@@ -1,0 +1,77 @@
+/vignettes/.RData
+/vignettes/Inserting_figures_and_evaluated_examples.tex
+/vignettes/Inserting_bibtex_references.tex
+/vignettes/auto/
+/auto/
+/R/all.ps
+/revdep/
+countr/build/
+/Org/
+/.RData
+/.Rhistory
+
+## Emacs
+.emacs.desktop
+.emacs.desktop.lock
+*~
+
+# Created by https://www.gitignore.io/api/r
+
+### R ###
+# History files
+**/.Rhistory
+**/.Rapp.history
+
+# Session Data files
+**/.RData
+
+# Example code in package build process
+**/*-Ex.R
+
+# Output files from R CMD build
+**/*.tar.gz
+*.tar.gz
+
+# Output files from R CMD check
+**/*.Rcheck/
+/*.Rcheck/
+
+# RStudio files
+**/.Rproj.user/
+**/.Rproj.user/**
+**/.Rproj
+
+# produced vignettes
+**/*.html
+**/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+**/.httr-oauth
+
+# knitr and R markdown default cache directories
+**/*_cache/
+**/cache/
+
+# Temporary files created by R markdown
+**/*.utf8.md
+**/*.knit.md
+**/.Rproj.user
+
+#png files
+**/*.png
+**/vignettes/*.png
+
+#csv files
+**/*.csv
+
+#RDS files
+**/*.RDS
+
+#External Data
+**/inst/extdata/
+
+.Rproj.user
+^.*\.Rproj$
+^\.Rproj\.user$
+*.Rproj
+inst/doc

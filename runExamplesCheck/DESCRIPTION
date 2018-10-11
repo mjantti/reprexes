@@ -1,0 +1,18 @@
+Package: runExamplesCheck
+Title: Example of using Macro runExamples
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = c("Georgi", "N."),
+           family = "Boshnakov",
+           role = c("aut", "cre"),
+           email = "georgi.boshnakov@gmail.com")
+Description: Example of using macro runExamples.Until recently (up to at
+    least summer 2018) R's checks were complaining that Sexpr is an
+    unknown top level section in Rd files. Build and check this package
+    with R's checking tools to see if a particular version of R produces
+    this warning.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RdMacros: Rdpack
+Imports: Rdpack

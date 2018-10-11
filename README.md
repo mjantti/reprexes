@@ -25,4 +25,17 @@ cleaned up from anything not related to the issue, while keeping the package
 valid. In this example, I copied an Rd file from package 'lagged' and cleaned it
 up.
 
-
+```
+title <- "Example of using macro runExamples"
+usethis::create_package(paste0("runExamplesCheck"), 
+	fields = list(
+	    Title = title, 
+		Description = paste0(title, ".", 
+			"Until recently (up to at least summer 2018) R's checks were ",
+			"complaining that Sexpr is an unknown top level section in Rd files. ",
+			"Build and check this package with R's checking tools to see if a ", 
+			"particular version of R produces this warning."
+		)
+	)
+)
+```
