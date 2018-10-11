@@ -16,6 +16,6 @@
 }
 
   Run the checks with to see if a current version of R still gives the warning.
-  R-devel (2018-10-02 r75388) does not.
+  R-devel (at least since 2018-10-02 r75388) does not.
 }
 \runExamples{2+2; pi; cos(pi)}
