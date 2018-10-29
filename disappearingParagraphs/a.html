@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for disappearingPar"><tr><td>disappearingPar</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Example</h2>
+
+<h3>Description</h3>
+
+<p>example</p>
+
+
+<h3>Details</h3>
+
+<p>Recent changes in R-devel seem to cause rendering the text returned by
+Rd macro as a single paragraph (in html), even if there are embedded
+empty lines in the text. Render this file to html with a recent
+R-devel and R-3.5.1patched to see the difference. The system
+information is printed in section Note.
+</p>
+
+
+<h3>Note</h3>
+
+<p>System information:
+</p>
+<pre>
+R Under development (unstable) (2018-10-27 r75507)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 7 x64 (build 7601) Service Pack 1
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=C                           
+[2] LC_CTYPE=English_United Kingdom.1252   
+[3] LC_MONETARY=English_United Kingdom.1252
+[4] LC_NUMERIC=C                           
+[5] LC_TIME=English_United Kingdom.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_3.6.0 tools_3.6.0   
+</pre>
+
+
+<h3>References</h3>
+
+<p>This is the result of a straigh Sexpr:
+</p>
+<p>a
+</p>
+<p>b
+</p>
+<p>c
+</p>
+<p>d
+</p>
+<p>In html, each letter above is inside a <code style="white-space: pre;">&lt;p&gt;</code> tag (both
+R-3.5-1patched and R-devel, see section Note for the system information
+for the rendered html file).
+</p>
+<p>Define a macro containing the same Sexpr:
+</p>
+<pre>
+\newcommand{\abc}{\Sexpr[stage=build,results=rd]{paste0(letters[1:4], collapse = "\n\n")}}
+</pre>
+
+<p>This is the result:
+</p>
+<p>a
+
+b
+
+c
+
+d
+<br /><br />
+In html, the empty lines are there in the html source, but in R-devel there is a single <code style="white-space: pre;">&lt;p&gt;</code>
+tag enclosing the whole Sexpr. In R-3.5-1patched each letter is enclosed
+with p-tags.
+</p>
+
+
+</body></html>
