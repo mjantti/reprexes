@@ -39,3 +39,17 @@ usethis::create_package(paste0("runExamplesCheck"),
 	)
 )
 ```
+
+```
+title <- "R cmd check does not report redundant dots argument in Rd file"
+usethis::create_package(paste0("redundantDots"), 
+	fields = list(
+	    Author = "Georgi N. Boshnakov",
+	    Title = title, 
+		Description = paste0(title, ".", 
+			"",
+			""
+		)
+	)
+)
+```

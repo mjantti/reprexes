@@ -1,0 +1,21 @@
+Package: redundantDots
+Title: 'R check' Does not Report Redundant '...' Argument in Rd File
+Version: 0.0.1
+Authors@R: 
+    person(given = c("Georgi", "N."),
+           family = "Boshnakov",
+           role = c("aut", "cre"),
+           email = "georgi.boshnakov@manchester.ac.uk")
+Description:
+    Function 'fun_3' has three arguments but its documentation describes in
+    addition '...'.  'R cmd check' does not report the redundant '...'
+    argument. 'fun_3a' is similar with '\dots' as the redundant argument.
+    This omission by 'R CMD check' seems specific to the dots argument -
+    'fun_3b' describes a non-existent argument 'dummy' and this is catched by
+    the check. Checked under Windows on win-builder on 17 April 2018 with
+    R version 3.6.0 beta (2019-04-16 r76403),
+    R version 3.5.3 (2019-03-11) and
+    R version 3.4.4 (2018-03-15).
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
